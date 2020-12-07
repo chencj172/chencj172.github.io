@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com/child">
-  <title>Archives: 2020/12 | 陈常杰的个人博客</title>
+  <title>陈常杰的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="图书管理系统github项目地址:链接地址基于servlet+jsp+mysql+c3p0+jdbc+前端三大件的图书管理系统(只适合新手练习，有些地方还是不够严谨)  简介一个适合JavaWeb新手的项目，没有使用任何框架，但是尽可能利用了MVC模式。实现用户对数据库中的图书进行借阅的功能，管理员能够对用户借书的这个请求作出相应的回答。  涉及到的知识点html&#x2F;css&#x2F;js&#x2F;jq+servl">
+<meta property="og:type" content="article">
 <meta property="og:title" content="陈常杰的个人博客">
-<meta property="og:url" content="http://example.com/child/archives/2020/12/index.html">
+<meta property="og:url" content="http://example.com/child/2020/12/07/javawebProject_1/index.html">
 <meta property="og:site_name" content="陈常杰的个人博客">
+<meta property="og:description" content="图书管理系统github项目地址:链接地址基于servlet+jsp+mysql+c3p0+jdbc+前端三大件的图书管理系统(只适合新手练习，有些地方还是不够严谨)  简介一个适合JavaWeb新手的项目，没有使用任何框架，但是尽可能利用了MVC模式。实现用户对数据库中的图书进行借阅的功能，管理员能够对用户借书的这个请求作出相应的回答。  涉及到的知识点html&#x2F;css&#x2F;js&#x2F;jq+servl">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201207220213464.png">
+<meta property="article:published_time" content="2020-12-07T14:57:35.905Z">
+<meta property="article:modified_time" content="2020-12-07T15:01:10.882Z">
 <meta property="article:author" content="Chencj">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201207220213464.png">
   
     <link rel="alternative" href="/atom.xml" title="陈常杰的个人博客" type="application/atom+xml">
   
@@ -146,112 +152,206 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-javawebProject_1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="图书管理系统"><a href="#图书管理系统" class="headerlink" title="图书管理系统"></a>图书管理系统</h2><p>github项目地址:<a target="_blank" rel="noopener" href="https://github.com/chencj172/JavaWeb-">链接地址</a><br>基于servlet+jsp+mysql+c3p0+jdbc+前端三大件的图书管理系统<br>(只适合新手练习，有些地方还是不够严谨)</p>
+<hr>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一个适合JavaWeb新手的项目，没有使用任何框架，但是尽可能利用了MVC模式。实现用户对数据库中的图书进行借阅的功能，管理员能够对用户借书的这个请求作出相应的回答。</p>
+<ul>
+<li>涉及到的知识点html/css/js/jq+servlet+jsp+mysql</li>
+<li>数据库连接主要使用了jdbc+c3p0,你可以在c3p0.xml中配置你本地的连接信息</li>
+</ul>
+<h2 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h2><ul>
+<li>首先把c3p0.xml中的配置信息改成自己本地的连接信息</li>
+<li>在mysql中建立项目中所用到的数据库</li>
+<li>配置你的tomcat信息</li>
+<li>然后运行项目</li>
+<li>最后在浏览器中输入localhost:8080/login.jsp进行登录操作</li>
+</ul>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
+<li>book表存储当前可以借阅的图书</li>
+<li>bookadmin表存储管理员的用户名和密码</li>
+<li>bookcase表存储图书类型</li>
+<li>borrow表存储借书列表</li>
+<li>reader表存储用户用户名和密码</li>
+<li>returnbook表没有可忽略</li>
+</ul>
+<h2 id="处理后台的java-package"><a href="#处理后台的java-package" class="headerlink" title="处理后台的java package"></a>处理后台的java package</h2><ul>
+<li>controller 与前端直接交互数据的java文件</li>
+<li>entity 表示各种实例对象</li>
+<li>Filter 过滤器</li>
+<li>service controller层拿到数据交给service进行逻辑处理</li>
+<li>repository 响应service所需要的的数据</li>
+<li>utils 封装数据库连接池<h2 id="前端展示"><a href="#前端展示" class="headerlink" title="前端展示"></a>前端展示</h2></li>
+<li>login.jsp 登录页面</li>
+<li>index.jsp 展示可借阅的书籍</li>
+<li>borrow.jsp 展示用户的借书情况</li>
+<li>admin.jsp 管理员待处理的业务</li>
+<li>return.jsp 图书归还，管理员进行管理<h2 id="用到的jar包"><a href="#用到的jar包" class="headerlink" title="用到的jar包"></a>用到的jar包</h2><img src="https://img-blog.csdnimg.cn/20201207220213464.png" alt="在这里插入图片描述"></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>打钱+Q:1378755306<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/07/javawebProject_1/" class="archive-article-date">
-  	<time datetime="2020-12-07T14:57:35.905Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/child/2020/12/07/javawebProject_1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/04/fanfan/" class="archive-article-date">
-  	<time datetime="2020-12-04T11:03:20.505Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/04/fanfan/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/04/fanfan/">我的第一篇文章</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="javawebProject_1" data-title="" data-url="http://example.com/child/2020/12/07/javawebProject_1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">目录</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我的第一篇博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/04/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-04T03:28:10.956Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/04/hello-world/">Hello World</a>
-    </h1>
+  <div id="SOHUCS" sid="javawebProject_1" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -274,8 +374,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -148,6 +148,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-javawebProject_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="图书管理系统"><a href="#图书管理系统" class="headerlink" title="图书管理系统"></a>图书管理系统</h2><p>github项目地址:<a target="_blank" rel="noopener" href="https://github.com/chencj172/JavaWeb-">链接地址</a><br>基于servlet+jsp+mysql+c3p0+jdbc+前端三大件的图书管理系统<br>(只适合新手练习，有些地方还是不够严谨)</p>
+<hr>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一个适合JavaWeb新手的项目，没有使用任何框架，但是尽可能利用了MVC模式。实现用户对数据库中的图书进行借阅的功能，管理员能够对用户借书的这个请求作出相应的回答。</p>
+<ul>
+<li>涉及到的知识点html/css/js/jq+servlet+jsp+mysql</li>
+<li>数据库连接主要使用了jdbc+c3p0,你可以在c3p0.xml中配置你本地的连接信息</li>
+</ul>
+<h2 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h2><ul>
+<li>首先把c3p0.xml中的配置信息改成自己本地的连接信息</li>
+<li>在mysql中建立项目中所用到的数据库</li>
+<li>配置你的tomcat信息</li>
+<li>然后运行项目</li>
+<li>最后在浏览器中输入localhost:8080/login.jsp进行登录操作</li>
+</ul>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
+<li>book表存储当前可以借阅的图书</li>
+<li>bookadmin表存储管理员的用户名和密码</li>
+<li>bookcase表存储图书类型</li>
+<li>borrow表存储借书列表</li>
+<li>reader表存储用户用户名和密码</li>
+<li>returnbook表没有可忽略</li>
+</ul>
+<h2 id="处理后台的java-package"><a href="#处理后台的java-package" class="headerlink" title="处理后台的java package"></a>处理后台的java package</h2><ul>
+<li>controller 与前端直接交互数据的java文件</li>
+<li>entity 表示各种实例对象</li>
+<li>Filter 过滤器</li>
+<li>service controller层拿到数据交给service进行逻辑处理</li>
+<li>repository 响应service所需要的的数据</li>
+<li>utils 封装数据库连接池<h2 id="前端展示"><a href="#前端展示" class="headerlink" title="前端展示"></a>前端展示</h2></li>
+<li>login.jsp 登录页面</li>
+<li>index.jsp 展示可借阅的书籍</li>
+<li>borrow.jsp 展示用户的借书情况</li>
+<li>admin.jsp 管理员待处理的业务</li>
+<li>return.jsp 图书归还，管理员进行管理<h2 id="用到的jar包"><a href="#用到的jar包" class="headerlink" title="用到的jar包"></a>用到的jar包</h2><img src="https://img-blog.csdnimg.cn/20201207220213464.png" alt="在这里插入图片描述"></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/07/javawebProject_1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-fanfan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
